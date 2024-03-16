@@ -1,0 +1,117 @@
+//
+//
+// 
+// Foreign Currency Calc2.cpp 
+//
+//
+//
+
+#include <fstream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+
+{
+    // Here I define the variables used below
+    double penny, nickel, dime, quarter, loonie, toonie, fivedollarbill, tendollarbill, twentydollarbill, fiftydollarbill, hundreddollarbill;
+    string line, line2;
+    string moneyfilename = "c:\\users\\mdshu\\OneDrive\\Desktop\\moneyfile.txt";
+    
+    // Here I created a file string to ensure the integrity of the file
+    std::ifstream moneyfile(moneyfilename);
+    if (!moneyfile.good()) 
+    {
+        cout << "File not found or in improper format";
+        return 0;
+    }
+    // I recall the information from the file and have it print out the number of each denomination 
+    ifstream imoneyfile;
+    imoneyfile.open(moneyfilename);
+    getline(imoneyfile, line);
+    int pos = line.find('#');
+    penny = std::stoi(line.substr(0, pos));
+    cout << penny << " Pennies\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    nickel = std::stoi(line.substr(0, pos));
+    cout << nickel << " Nickels\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    dime = std::stoi(line.substr(0, pos));
+    cout << dime << " Dimes\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    quarter = std::stoi(line.substr(0, pos));
+    cout << quarter << " Quarters\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    loonie = std::stoi(line.substr(0, pos));
+    cout << loonie << " Loonies\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    toonie = std::stoi(line.substr(0, pos));
+    cout << toonie << " Toonies\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    fivedollarbill = std::stoi(line.substr(0, pos));
+    cout << fivedollarbill << " Five Dollar Bills\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    tendollarbill = std::stoi(line.substr(0, pos));
+    cout << tendollarbill << " Ten Dollar Bills\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    twentydollarbill = std::stoi(line.substr(0, pos));
+    cout << twentydollarbill << " Twenty Dollar Bills\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    fiftydollarbill = std::stoi(line.substr(0, pos));
+    cout << fiftydollarbill << " Fifty Dollar Bills\n";
+    getline(imoneyfile, line);
+    pos = line.find('#');
+    hundreddollarbill = std::stoi(line.substr(0, pos));
+    cout << hundreddollarbill << " Hundred Dollar Bills\n";
+   
+  
+    imoneyfile.close();
+    
+    //original portion of previous assigment 
+    double pennyownership = penny * 0.01;
+   
+    double nickelownership = nickel * 0.05;
+   
+    double dimeownership = dime * 0.10;
+ 
+    double quarterownership = quarter * 0.25;
+    
+    double loonieownership = loonie * 1;
+
+    double toonieownership = toonie * 2;
+ 
+    double fivedollarbillownership = fivedollarbill * 5;
+    
+    double tendollarbillownership = tendollarbill * 10;
+    
+    double twentydollarbillownership = twentydollarbill * 20;
+  
+    double fiftydollarbillownership = fiftydollarbill * 50;
+   
+    double hundreddollarbillownership = hundreddollarbill * 100;
+
+    double sum = pennyownership + nickelownership + dimeownership + quarterownership + loonieownership + toonieownership + fivedollarbillownership + tendollarbillownership + twentydollarbillownership + fiftydollarbillownership + hundreddollarbillownership;
+    
+    
+    //Here I output the sum of all the currency
+    cout << "\nYou have\n" << sum << "\nCanadian dollars\n";
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    
+    return 0;
+
+
+
+
+}
