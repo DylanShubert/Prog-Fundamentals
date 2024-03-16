@@ -1,0 +1,42 @@
+//
+//  MadLib.cpp
+//  
+//
+//  Created by Michael Shubert on 2/12/2024.
+//
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+
+    string Noun1 = "Earth";
+    string Noun2 = "country";
+    string Noun3 = "corn dog";
+    string Occupation = "Hedonisitic Drone Pilot";
+    string Verb = "request";
+    string Place = "Stupid Lake, Manitoba, Canada";
+    string Verb_ending_in_ED = "loitered";
+    string Noun4 = "syllabus";
+    string Verb_ending_in_ING = "programming";
+    string Noun_Plural = "protests";
+    string Noun5 = "soda machine";
+    string Emotion = "glee";
+
+    cout << endl; // blank line
+    cout << "It was during the battle of " << Noun1 << " when I was running through a " << Noun2 << " when a"<< endl;
+    cout << Noun3 << " went off right next to my platoon. Our " << Occupation << " yelled"<< endl;
+    cout << "for us to " << Verb << " to the nearest " << Place << " we could find."<< endl;
+    cout << "When we got to the " << Place << " we " << Verb_ending_in_ED << " to start a fire."<< endl;
+    cout << "As we were starting the fire the enemy saw the " << Noun4 << " from the fire and"<< endl;
+    cout << "started " << Verb_ending_in_ING << " " << Noun_Plural << " at us. We all quickly ducked behind the " << Noun5 << endl;
+    cout << "at the " << Place << " and returned fire. We quickly"<< endl;
+    cout << "eliminated the enemy and were " << Emotion << " that we had won the battle."<< endl;
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+
+    return 0;
+}
