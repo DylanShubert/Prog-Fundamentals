@@ -1,0 +1,86 @@
+//
+//  MadLib.cpp
+//  
+//
+//  Created by Michael Shubert on 2/12/2024.
+//
+
+#include <iostream>
+using namespace std;
+
+void PrintStory(string);
+
+int main() 
+
+{
+    //Here I declare each variable in a string
+    string Noun1, Noun2, Noun3, Occupation, Verb, Place, Verb_ending_in_ED, Noun4, Verb_ending_in_ING, Noun_Plural, Noun5, Emotion;
+
+    cout << "Welcome to Dylan's Madlibs 2.0 assignment. Please answer the following. \n"; 
+
+    cout << "\nPlease enter a noun: "; //couts are used so the user can input values for each variable
+
+    cin >> Noun1; //cins are used to store the input 
+
+    cout << "\nPlease enter another noun: ";
+
+    cin >> Noun2;
+
+    cout << "\nPlease enter another noun: ";
+
+    cin >> Noun3; 
+
+    cout << "\nPlease enter an occupation: ";
+
+    cin >> Occupation;
+
+    cout << "\nPlease enter a verb: ";
+
+    cin >> Verb;
+
+    cout << "\nPlease enter a place: ";
+
+    cin >> Place;
+
+    cout << "\nPlease enter a verb ending in ed: ";
+
+    cin >> Verb_ending_in_ED;
+
+    cout << "\nPlease enter another noun: ";
+
+    cin >> Noun4;
+
+    cout << "\nPlease enter a verb ending in ing: "; 
+
+    cin >> Verb_ending_in_ING;
+
+    cout << "\nPlease enter a plural noun: ";
+
+    cin >> Noun_Plural;
+
+    cout << "\nPlease enter another noun: ";
+
+    cin >> Noun5;
+
+    cout << "\nPlease enter an emotion: ";
+    
+    cin >> Emotion;
+
+
+    //the script is played and each variable is filled into it respective place in the script. 
+
+    cout << endl; // blank line
+    cout << "It was during the battle of " << Noun1 << " when I was running through a " << Noun2 << " when a"<< endl;
+    cout << Noun3 << " went off right next to my platoon. Our " << Occupation << " yelled"<< endl;
+    cout << "for us to " << Verb << " to the nearest " << Place << " we could find."<< endl;
+    cout << "When we got to the " << Place << " we " << Verb_ending_in_ED << " to start a fire."<< endl;
+    cout << "As we were starting the fire the enemy saw the " << Noun4 << " from the fire and"<< endl;
+    cout << "started " << Verb_ending_in_ING << " " << Noun_Plural << " at us. We all quickly ducked behind the " << Noun5 << endl;
+    cout << "at the " << Place << " and returned fire. We quickly"<< endl;
+    cout << "eliminated the enemy and were " << Emotion << " that we had won the battle."<< endl;
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+
+    return 0;
+}
