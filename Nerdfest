@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+	int bus, nerds;
+	int nerdsremainder;
+	double van;
+	double vancost, buscost;
+	double grouptickets, singletickets, totalcosttickets, totalcosttransportation, costperperson;
+
+	cout << "\nHOW MANY NERDS WILL BE ATTENDING THE SCIENTOLOGY CONVENTION? ";
+	cin >> nerds;
+
+	bus = nerds / 20;
+	nerdsremainder = nerds % 20;
+	van = nerdsremainder / 6;
+	nerdsremainder = nerdsremainder % 6;
+	if (nerdsremainder > 0) {
+		van ++;
+	}
+
+	totalcosttransportation = bus * 450 + van * 200;
+
+
+	grouptickets = nerds / 4;
+	nerdsremainder = nerds % 4;
+	singletickets = nerdsremainder / 1;
+	nerdsremainder = nerdsremainder % 1;
+	
+	totalcosttickets = grouptickets * 50 + singletickets * 17;
+	costperperson = (totalcosttransportation + totalcosttickets) / nerds;
+
+	cout << "\n***************************************************\n";
+	cout << "\nThe total number of busses is " << bus << endl;
+	cout << "\nThe total number of vans are " << van << endl;
+	cout << "\nThe total number of group tickets required are " << grouptickets << endl;
+	cout << "\nThe total number of single tickets required are " << singletickets << endl;
+	cout << "\nThe total cost of transportation is $" << totalcosttransportation << endl;
+	cout << "\nThe total cost of tickets are $" << totalcosttickets << endl;
+	cout << "\nThe cost per each individual is $" << setprecision(4) << costperperson << endl;
+	cout << "\n***************************************************\n";
+
+	return 0;
+
+}
