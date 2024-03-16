@@ -1,0 +1,106 @@
+//
+//
+// 
+// Foreign Currency Calc.cpp 
+//
+//
+//
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+    //i made a variable of each denomination
+    double penny, nickel, dime, quarter, loonie, toonie, fivedollarbill, tendollarbill, twentydollarbill, fiftydollarbill, hundreddollarbill;
+
+    cout << "\nPlease enter how many pennies you have.\n";
+    
+    //i made a cout to have the user imput how many of the specified denomination they have
+
+    cin >> penny;
+
+    //the number of coins/banknotes is stored in this cin 
+    
+    double pennyownership = penny * 0.01;
+    
+    //the number of banknotes/coins is then multipled by its value
+    //i repeated this process for the rest of the denominations
+
+    cout << "\nPlease enter how many nickels you have.\n";
+
+    cin >> nickel;
+
+    double nickelownership = nickel * 0.05;
+
+    cout << "\nPlease enter how many dimes you have.\n";
+
+    cin >> dime;
+
+    double dimeownership = dime * 0.10;
+
+    cout << "\nPlease enter how many quarters you have.\n";
+
+    cin >> quarter;
+
+    double quarterownership = quarter * 0.25;
+
+    cout << "\nPlease enter how many loonies you have ($1).\n";
+
+    cin >> loonie;
+
+    double loonieownership = loonie * 1;
+
+    cout << "\nPlease enter how many toonies you have ($2).\n";
+
+    cin >> toonie;
+
+    double toonieownership = toonie * 2;
+
+    cout << "\nPlease enter how many $5 dollar bills you have.\n";
+
+    cin >> fivedollarbill;
+
+    double fivedollarbillownership = fivedollarbill * 5;
+
+    cout << "\nPlease enter how many $10 dollar bills you have.\n";
+
+    cin >> tendollarbill;
+
+    double tendollarbillownership = tendollarbill * 10;
+
+    cout << "\nPlease enter how many $20 dollar bills you have.\n";
+
+    cin >> twentydollarbill;
+
+    double twentydollarbillownership = twentydollarbill * 20;
+
+    cout << "\nPlease enter how many $50 dollar bills you have.\n";
+
+    cin >> fiftydollarbill;
+
+    double fiftydollarbillownership = fiftydollarbill * 50;
+
+    cout << "\nPlease enter how many $100 dollar bills you have.\n";
+
+    cin >> hundreddollarbill;
+
+    double hundreddollarbillownership = hundreddollarbill * 100;
+
+    //i declared a sum value of each of the total values of each denomination to find out the users total cash on hand in canadian dollars
+
+    double sum = pennyownership + nickelownership + dimeownership + quarterownership + loonieownership + toonieownership + fivedollarbillownership + tendollarbillownership + twentydollarbillownership + fiftydollarbillownership + hundreddollarbillownership;
+    
+    //here i output to the screen the sum
+
+    cout << "\nYou have\n" << sum << "\nCanadian dollars\n";
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+
+    return 0;
+
+
+}
