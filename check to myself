@@ -1,0 +1,24 @@
+//
+//  Check_to_Myself.cpp
+//  
+//
+//  Created by Michael Shubert 1/29/24
+//
+
+#include <iostream>
+int main()
+{
+    std::cout << "+___________________________________________________+" << std::endl;
+    std::cout << "|                                        1234       |"  << std::endl;
+    std::cout << "| Large Corporate Buisness                          |" << std::endl;
+    std::cout << "|                        DATE__ 1/29/2028           |" << std::endl;
+    std::cout << "|  PAY TO THE                                       |" << std::endl;
+    std::cout << "|  ORDER OF__Michael_Shubert_____   $10,000,000     |" << std::endl;
+    std::cout << "|                                                   |" << std::endl;
+    std::cout << "|  MEMO____Michaels Software start up_              |"<< std::endl;
+    std::cout << "|                                                   |"<< std::endl;
+    std::cout << "|    :000000000:  :000000000:     1234              |"<< std::endl;
+    std::cout << "+___________________________________________________+"<< std::endl;
+    
+return 0;
+}
