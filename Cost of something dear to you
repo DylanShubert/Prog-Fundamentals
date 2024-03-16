@@ -1,0 +1,59 @@
+//
+// 
+// 
+//  Costofsomethingdeartoyou.cpp 
+//
+//
+//  Created by Michael Shubert on 2/17/2024
+//
+
+
+#include <iostream>
+using namespace std;
+
+void PrintStory(string);
+
+int main()
+
+{   //I start by declaring values for each monthly cost.
+    int Hobbies, Clothing, Entertainment, Phone, Food, Rent, sum;
+    //I have a cout for each fee instructing the user to input the monthly cost.
+    cout << "\nPlease enter your monthly payment for hobbies.\n";
+    //I create a cin where the information is stored.
+    cin >> Hobbies;
+
+    cout << "\nPlease enter your monthly payment for clothing.\n";
+
+    cin >> Clothing;
+
+    cout << "\nPlease enter your monthly payment for entertainment.\n";
+
+    cin >> Entertainment;
+
+    cout << "\nPlease enter your monthly payment for your phone bill.\n";
+
+    cin >> Phone;
+
+    cout << "\nPlease enter your monthly payment for food.\n";
+
+    cin >> Food;
+
+    cout << "\nPlease enter your monthly payment for rent.\n";
+
+    cin >> Rent;
+
+
+    //I declare a sum that adds up the total fees for monthly expense. 
+    int sum = Hobbies + Clothing + Entertainment + Phone + Food + Rent;
+    cout << "\nYour monthly cost: \n" << sum;
+    cout << "\nYour annual cost: \n" << sum * 12; //Here I have the monthly fee multipled by 12 and output to the user at the end of the program.
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+    cout << endl; //space between output and debugger
+
+    return 0;
+
+
+
+
+}
