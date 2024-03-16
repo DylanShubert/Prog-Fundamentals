@@ -1,0 +1,196 @@
+#include<iostream>
+#include<iomanip> //iomanip for setw()
+using namespace std;
+
+int main()
+{ //doubles
+	double laborcost, packagingcost, numberofflowers, flowercost;
+	double numcat1arrange, numcat2arrange, numcat3arrange;
+	double flowerspercat1arrange, flowerspercat2arrange, flowerspercat3arrange;
+	double cat1price, cat2price, cat3price;
+	double numcat1flowers, numcat2flowers, numcat3flowers;
+	double grossprofit, netprofit;
+
+	int flower; //initial layout of prompts for user over view
+	cout << "\nWELCOME TO THE FLOWER HUSTLE CALCULATOR!\n";
+	cout << "1: ENTER THE TYPE OF FLOWER (ENTER 1 FOR ROSES, 2 FOR OTHER):\n";
+	cout << "2: ENTER THE COST OF FLOWER PER UNIT\n";
+	cout << "3: ENTER THE COST OF LABOR:\n";
+	cout << "4: ENTER THE COST OF PACKAGING:\n";
+	cout << "5: ENTER THE NUMBER OF CATEGORY 1 ARANGEMENTS SOLD FOLLOWED BY HOW MANY FLOWERS ARE IN THE ARANGEMENT:\n";
+	cout << "6: ENTER THE NUMBER OF CATEGORY 2 ARANGEMENTS SOLD FOLLOWED BY HOW MANY FLOWERS ARE IN THE ARANGEMENT:\n";
+	cout << "7: ENTER THE NUMBER OF CATEGORY 3 ARANGEMENTS SOLD FOLLOWED BY HOW MANY FLOWERS ARE IN THE ARANGEMENT:\n";
+	
+	//prompts repeated followed by variable intputs
+	cout << "\n1. TYPE OF FLOWER (1 FOR ROSES, 2 FOR OTHER): ";
+	cin >> flower;
+	cout << "\n2. COST PER FLOWER: ";
+	cin >> flowercost;
+	cout << "\n3. COST OF LABOR: ";
+	cin >> laborcost;
+	cout << "\n4. COST OF PACKAGING: ";
+	cin >> packagingcost;
+	cout << "\n5a. CATEGORY 1 ARANGEMETNS SOLD: ";
+	cin >> numcat1arrange;
+	cout << "\n5b. NUMBER OF FLOWERS IN ARANGEMENT 1: ";
+	cin >> flowerspercat1arrange;
+	cout << "\n6a. CATEGORY 2 ARRANGEMETNS SOLD: ";
+	cin >> numcat2arrange;
+	cout << "\n6b. NUMBER OF FLOWERS IN ARANGEMENT 2: ";
+	cin >> flowerspercat2arrange;
+	cout << "\n7a. CATEGORY 3 ARRANGEMETNS SOLD: ";
+	cin >> numcat3arrange;
+	cout << "\n7b. NUMBER OF FLOWERS IN ARANGEMENT 3: ";
+	cin >> flowerspercat3arrange;
+
+	
+
+	
+	//formulas for final output
+	numcat1flowers = numcat1arrange * flowerspercat1arrange;
+	numcat2flowers = numcat2arrange * flowerspercat2arrange;
+	numcat3flowers = numcat3arrange * flowerspercat3arrange;
+	cat1price = numcat1arrange * flowerspercat1arrange * flowercost;
+	cat2price = numcat2arrange * flowerspercat2arrange * flowercost;
+	cat3price = numcat3arrange * flowerspercat3arrange * flowercost;
+	grossprofit = cat1price + cat2price + cat3price;
+	netprofit = grossprofit - laborcost - packagingcost;
+	numberofflowers = numcat1flowers + numcat2flowers + numcat3flowers;
+	string line = "|"; // setw experiment 
+	// char lettergrade; failed attempt at letter grade assigning 
+
+	/* here i attepmted to make a letter grade system for net profit. Would like potential help to see how to complete this if its possible to do so with this method.
+	if (netprofit < 0 || lettergrade>10000)
+	{
+		cout << "Invalid Score" << endl;
+		return 0; // stop execution
+	}
+
+	// find grade using switch-case
+	switch (netprofit / 10000)
+	{
+	case 10000:
+	case 9999-9000:
+		lettergrade = 'A';
+		break;
+	case 8999-8000:
+		lettergrade = 'B';
+		break;
+	case 7999-7000:
+		lettergrade = 'C';
+		break;
+	case 6999-6000:
+		lettergrade = 'D';
+		break;
+	case 5999-5000:
+		lettergrade = 'E';
+		break;
+	default:
+		lettergrade = 'F';
+	}
+	*/
+	//if statement gag for string flower, prompt question 1 dictates if this appears
+	if (flower == 1)
+	{
+		cout << "\n_______oBBBBB8o______oBBBBBBB\n";
+		cout << "\n_____o8BBBBBBBBBBB__BBBBBBBBB8________o88o,\n";
+		cout << "\n___o8BBBBBB** 8BBBB__BBBBBBBBBB_____oBBBBBBBo,\n";
+		cout << "\n__oBBBBBBB* ___*** ___BBBBBBBBBB_____BBBBBBBBBBo,\n";
+		cout << "\n_8BBBBBBBBBBooooo___* BBBBBBB8______* BB* _8BBBBBBo,\n";
+		cout << "\n_8BBBBBBBBBBBBBBBB8ooBBBBBBB8___________8BBBBBBB8,\n";
+		cout << "\n__* BBBBBBBBBBBBBBBBBBBBBBBBBB8_o88BB88BBBBBBBBBBBB,\n"; //ascii art
+		cout << "\n____* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB8,\n";
+		cout << "\n______** 8BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*,\n";
+		cout << "\n___________* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB8*,\n";
+		cout << "\n____________* BBBBBBBBBBBBBBBBBBBBBBBB8888**,\n";
+		cout << "\n_____________BBBBBBBBBBBBBBBBBBBBBBB*,\n";
+		cout << "\n_____________* BBBBBBBBBBBBBBBBBBBBB*,\n";
+		cout << "\n______________* BBBBBBBBBBBBBBBBBB8,\n";
+		cout << "\n_______________* BBBBBBBBBBBBBBBB*,\n";
+		cout << "\n________________8BBBBBBBBBBBBBBB8,\n";
+		cout << "\n_________________8BBBBBBBBBBBBBBBo,\n";
+		cout << "\n__________________BBBBBBBBBBBBBBB8,\n";
+		cout << "\n__________________BBBBBBBBBBBBBBBB,\n";
+		cout << "\n__________________8BBBBBBBBBBBBBBB8,\n";
+		cout << "\n__________________* BBBBBBBBBBBBBBBB,\n";
+		cout << "\n__________________8BBBBBBBBBBBBBBBB8,\n";
+		cout << "\n_________________oBBBBBBBBBBBBBBBBBB,\n";
+		cout << "\n________________oBBBBBBBBBBBBBBBBBBB,\n";
+		cout << "\n________________BBBBBBBBBBBBBBBBBBBB,\n";
+		cout << "\n_______________8BBBBBBBBBBBBBBBBBBB8,\n";
+		cout << "\n______________oBBBBBBBBB88BBBBBBBBB8,\n";
+		cout << "\n______________8BBBBBBBBB * 8BBBBBBBBB*,\n";
+		cout << "\n______________BBBBBBBBB* _BBBBBBBBB8,\n";
+		cout << "\n______________BBBBBBBB8_oBBBBBBBBB*,\n";
+		cout << "\n______________8BBBBBBB__oBBBBBBBB*,\n";
+		cout << "\n______________BBBBBBB* __8BBBBBBB*,\n";
+		cout << "\n_____________8BBBBBB* ___BBBBBBB*,\n";
+		cout << "\n____________8BBBBBB8___oBBBBBB8,\n";
+		cout << "\n___________8BBBBBB8____8BBBBBB*,\n";
+		cout << "\n__________oBBBBBB8____BBBBBBB8,\n";
+		cout << "\n__________BBBBBBB8___BBBBBBBB*,\n";
+		cout << "\n_________oBBBBBBB8___BBBBBBBB,\n";
+		cout << "\n_________8BBBBBB8____BBBBBBB*,\n";
+		cout << "\n_________BBBBBB* _____8BBBBB*,\n";
+		cout << "\n________oBBBB8_______BBBBB*,\n";
+		cout << "\n________oBBB8________BBBB*,\n";
+		cout << "\n______8BBBB* _______* BBBBBBBB8o,\n";
+		cout << "\n______BBBBB* ____________ * 88BBBo\n";
+		cout << "\n _____ _____ _____ _____ _____    _____ _____ _____    _____ _____ _____ ____  _____ _____ _____ _____    ____  _____ ____  _____ _____ ";
+		cout << "\n| __  |     |   __|   __|   __|  |   __|     | __  |  |  |  |  _  | __  |    \ |     |     | __  |   __|  |    \ |  |  |    \ |   __|   __| ";
+		cout << "\n|    -|  |  |__   |   __|__   |  |   __|  |  |    -|  |     |     |    -|  |  |   --|  |  |    -|   __|  |  |  |  |  |  |  |   __|__   | ";
+		cout << "\n|__|__|_____|_____|_____|_____|  |__|  |_____|__|__|  |__|__|__|__|__|__|____/|_____|_____|__|__|_____|  |____/|_____|____/|_____|_____| ";
+		cout << "\n";
+		cout << "\n************************************ROSES THAT HARDCORE DUDES CAN BUY FOR PERSONAL ENJOYMENT*********************************************\n";
+		cout << "\n*******************************************SNIFF ROSE BEFORE WORKOUT FOR HARDCORE PUMP***************************************************\n";
+		cout << endl << endl; //meat and potatoes
+		cout << " ---------------------------------------------------------------\n";
+		cout << "|                    ROSE SELLING STATS                         |\n";
+		cout << "|---------------------------------------------------------------|\n";
+		cout << "|                                                               |\n";  //I couldnt get this to make a perfect box regardless of the input. Would appreciate help on fixing it
+		cout << "|TYPE OF FLOWER:" << right << setw(48) << flower << line << endl;
+		cout << "|NUMBER OF FLOWERS SOLD:" << right << setw(40) << numberofflowers << line << endl;
+		cout << "|CATEGORY 1 ARRANGEMENTS SOLD:" << right << setw(26) << numcat1arrange << " ($" << cat1price << ")" << line << endl;
+		cout << "|CATEGORY 2 ARRANGEMENTS SOLD:" << right << setw(26) << numcat2arrange << " ($" << cat2price << ")" << line << endl;
+		cout << "|CATEGORY 3 ARRANGEMENTS SOLD:" << right << setw(26) << numcat3arrange << " ($" << cat3price << ")" << line << endl;
+		cout << "|COST OF FLOWERS:" << right << setw(45) << "$" << flowercost << line << endl;
+		cout << "|LABOR CHARGES:" << right << setw(47) << "$" << laborcost << line << endl;
+		cout << "|COST OF PACKAGING:" << right << setw(43) << "$" << packagingcost << line << endl;
+		cout << "|GROSS PROFIT:" << right << setw(46) << "$" << grossprofit << line << endl;
+		cout << "|NET PROFIT:" << right << setw(48) << "$" << netprofit << line << endl;
+		cout << "|                                                               |\n";
+		cout << "|---------------------------------------------------------------|\n";
+		cout << "|             IMMACULATE FLOWER SELLING SKILLS                  |\n";
+		cout << " --------------------------------------------------------------- \n";
+		cout << "\n";
+		//cout << lettergrade;
+	}
+	else if(2) {
+
+
+		cout << "\n"; // else statement when users inputs other (2) for prompt question 1
+		cout << " ---------------------------------------------------------------\n";
+		cout << "|                   FLOWER SELLING STATS                        |\n";
+		cout << "|---------------------------------------------------------------|\n";
+		cout << "|                                                               |\n";  //I couldnt get this to make a perfect box regardless of the input. Would appreciate help on fixing it
+		cout << "|TYPE OF FLOWER:" << right << setw(48) << flower << line << endl;
+		cout << "|NUMBER OF FLOWERS SOLD:" << right << setw(40) << numberofflowers << line << endl;
+		cout << "|CATEGORY 1 ARRANGEMENTS SOLD:" << right << setw(26) << numcat1arrange << " ($" << cat1price << ")" << line << endl;
+		cout << "|CATEGORY 2 ARRANGEMENTS SOLD:" << right << setw(26) << numcat2arrange << " ($" << cat2price << ")" << line << endl;
+		cout << "|CATEGORY 3 ARRANGEMENTS SOLD:" << right << setw(26) << numcat3arrange << " ($" << cat3price << ")" << line << endl;
+		cout << "|COST OF FLOWERS:" << right << setw(45) << "$" << flowercost << line << endl;
+		cout << "|LABOR CHARGES:" << right << setw(47) << "$" << laborcost << line << endl;
+		cout << "|COST OF PACKAGING:" << right << setw(43) << "$" << packagingcost << line << endl;
+		cout << "|GROSS PROFIT:" << right << setw(46) << "$" << grossprofit << line << endl;
+		cout << "|NET PROFIT:" << right << setw(48) << "$" << netprofit << line << endl;
+		cout << "|                                                               |\n";
+		cout << "|---------------------------------------------------------------|\n";
+		cout << "|             IMMACULATE FLOWER SELLING SKILLS                  |\n";
+		cout << " --------------------------------------------------------------- \n";
+		cout << "\n";
+
+
+	}
+	return 0;
+
+}
